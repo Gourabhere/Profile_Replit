@@ -149,6 +149,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // --- Import Routes ---
+
   // GET all imports
   app.get("/api/imports", async (_req, res) => {
     try {
@@ -159,7 +161,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // POST create a new import
+  // POST create a new import record
   app.post("/api/imports", async (req, res) => {
     const data = validateRequest(insertImportSchema, req, res);
     if (!data) return;
@@ -168,7 +170,24 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const importData = await storage.createImport(data);
       res.status(201).json(importData);
     } catch (error) {
-      res.status(500).json({ message: "Failed to create import", error });
+      res.status(500).json({ message: "Failed to create import record", error });
+    }
+  });
+
+  // DELETE remove an import record
+  app.delete("/api/imports/:id", async (req, res) => {
+    try {
+      const id = parseInt(req.params.id);
+      if (isNaN(id)) {
+        return res.status(400).json({ message: "Invalid import ID" });
+      }
+      
+      await storage.removeImport(id);
+      res.status(204).send(); // 204 No Content on successful deletion
+    } catch (error) {
+      // Log the error for server-side debugging if needed
+      console.error("Failed to remove import:", error);
+      res.status(500).json({ message: "Failed to remove import record", error: error instanceof Error ? error.message : 'Unknown error' });
     }
   });
 

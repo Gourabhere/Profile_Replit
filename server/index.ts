@@ -1,6 +1,7 @@
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
+import minimist from 'minimist'; // Import minimist
 
 const app = express();
 app.use(express.json());
@@ -56,13 +57,16 @@ app.use((req, res, next) => {
     serveStatic(app);
   }
 
-  // ALWAYS serve the app on port 5000
-  // this serves both the API and the client.
-  // It is the only port that is not firewalled.
-  const port = 5000;
+  // Parse command-line arguments
+  const args = minimist(process.argv.slice(2));
+
+  // Use the port from arguments, or default to 9002
+  const port = args.port || 9002;
+  const host = args.host || "0.0.0.0";
+
   server.listen({
     port,
-    host: "0.0.0.0",
+    host,
     reusePort: true,
   }, () => {
     log(`serving on port ${port}`);

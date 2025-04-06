@@ -21,7 +21,7 @@ export default function Upload() {
   const handleDeleteImport = async (id: number) => {
     try {
       // In a real app, you would implement this endpoint
-      // await apiRequest('DELETE', `/api/imports/${id}`);
+      await apiRequest('DELETE', `/api/imports/${id}`);
       
       toast({
         title: "Import deleted",
