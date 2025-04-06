@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">TCS Talent Finder</string>
+    <string name="title_activity_main">TCS Talent Finder</string>
+    <string name="package_name">com.tcs.talentfinder</string>
+    <string name="custom_url_scheme">com.tcs.talentfinder</string>
+</resources>
