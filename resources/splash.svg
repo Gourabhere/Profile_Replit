@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <rect width="1200" height="1200" fill="#01295f" />
+  <text x="600" y="600" font-family="Arial" font-weight="bold" font-size="120" text-anchor="middle" fill="white">TCS Talent Finder</text>
+  <path d="M500,700 C500,680 520,660 540,660 L660,660 C680,660 700,680 700,700 L700,720 C700,740 680,760 660,760 L540,760 C520,760 500,740 500,720 Z" fill="white" opacity="0.3" />
+  <path d="M400,830 L800,830 M400,880 L800,880 M400,930 L650,930" stroke="white" stroke-width="25" stroke-linecap="round" />
+</svg>

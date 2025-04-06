@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#01295f" rx="100" ry="100" />
+  <text x="256" y="290" font-family="Arial" font-weight="bold" font-size="100" text-anchor="middle" fill="white">TCS</text>
+  <path d="M150,170 C150,150 170,130 190,130 L322,130 C342,130 362,150 362,170 L362,190 C362,210 342,230 322,230 L190,230 C170,230 150,210 150,190 Z" fill="white" opacity="0.3" />
+  <path d="M180,330 L332,330 M180,360 L332,360 M180,390 L280,390" stroke="white" stroke-width="18" stroke-linecap="round" />
+</svg>

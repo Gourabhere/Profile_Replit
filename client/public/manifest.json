@@ -1,0 +1,17 @@
+{
+  "name": "TCS Talent Finder",
+  "short_name": "TCS Talent",
+  "description": "An application for finding and managing talent resources at TCS",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#01295f",
+  "icons": [
+    {
+      "src": "/resources/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
